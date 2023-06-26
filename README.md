@@ -6,8 +6,8 @@
 ## Data
 - In the "data" folder, you will find two data sets; one for the results of student surveys (1,756 responses) and the other for the results of instructor surveys (140 responses). See the following documents for more information about the data sets and the summary results.
 
-	1. Ketcham, E., Funk, A., & Nagano, T. (2017). Students and Instructors of Languages at Community Colleges (SILCC) Surveys: Results from the Student Surveys, Fall 2015. Retrieved from www.cilc.gc.cuny.edu/lccn (download the [slides](https://github.com/tnagano22/SILCC2017/docs/Ketcham2017a.pdf))
-	2. Ketcham, E., Nagano, T., & Funk, A. (2017). Students and Instructors of Languages at Community Colleges (SILCC) Surveys: Results from the Instructor Surveys, Fall 2015. Retrieved from www.cilc.gc.cuny.edu/lccn (download the [slides](https://github.com/tnagano22/SILCC2017/docs/Ketcham2017b.pdf))
+	1. Ketcham, E., Funk, A., & Nagano, T. (2017). Students and Instructors of Languages at Community Colleges (SILCC) Surveys: Results from the Student Surveys, Fall 2015. Retrieved from www.cilc.gc.cuny.edu/lccn (download the [slides](https://github.com/tnagano22/SILCC2017/blob/69df79d06663873f2f10ecee4b6bc5c32a940fe3/docs/Ketcham2017a.pdf))
+	2. Ketcham, E., Nagano, T., & Funk, A. (2017). Students and Instructors of Languages at Community Colleges (SILCC) Surveys: Results from the Instructor Surveys, Fall 2015. Retrieved from www.cilc.gc.cuny.edu/lccn (download the [slides](https://github.com/tnagano22/SILCC2017/blob/69df79d06663873f2f10ecee4b6bc5c32a940fe3/docs/Ketcham2017b.pdf))
 
 ## Codebooks
 - Two codebooks (one for the student data and the other for the instructor data) are saved in the "codebooks" folder.
