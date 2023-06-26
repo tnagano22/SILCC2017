@@ -1,0 +1,410 @@
+%!TEX TS-program = xelatex
+%!TEX encoding = UTF-8 Unicode
+\documentclass[letterpaper,10pt]{article}
+\usepackage{fontspec}
+\defaultfontfeatures{Mapping=tex-text}
+\setmainfont[Numbers=OldStyle,Mapping=tex-text]{Arial}
+\newfontfamily\timesfont{Times}
+\newfontfamily\helveticafont{HelveticaNeue}
+\setsansfont[Scale=MatchLowercase,Mapping=tex-text]{Gill Sans}
+\setmonofont[Scale=MatchLowercase]{Monaco}
+\usepackage[us]{datetime}
+\newdateformat{mytoday}{\dayofweekname{\THEDAY}{\THEMONTH}{\THEYEAR},  \monthname[\THEMONTH] \ordinaldate{\THEDAY}, \THEYEAR}% \ \currenttime}
+\usepackage{wasysym}% provides \ocircle and \Box
+\usepackage{enumitem}% easy control of topsep and leftmargin for lists
+\usepackage{color}% used for background color
+\usepackage{typearea}
+\usepackage[contents=]{background}
+\usepackage{hyperref}
+\usepackage{multicol}
+\usepackage{multirow}
+\usepackage{ulem}
+\usepackage[top=1in, bottom=0.8in, left=1in, right=0.8in]{geometry}% refining the papersize
+\usepackage{textpos}
+\usepackage{graphicx}
+\usepackage{color,soul}
+\usepackage{fancyhdr}
+\pagestyle{fancy}
+\renewcommand{\headrulewidth}{0pt}
+\renewcommand{\footrulewidth}{0pt}
+\fancyhf{}
+\fancyhead[R]{\thepage}
+\fancyfoot[L]{\textcolor{gray!60}{\helveticafont \small \hspace{0.3in}Center for Integrated Language Communities: A U.S. Department of Education Title VI Language Resource Center\\
+\hspace{0.3in}365 Fifth Ave New York, NY 10016 | (212) 817-2084 | cilc@gc.cuny.edu | www.cilc.gc.cuny.edu\\
+\hspace{0.3in}The SILCC Surveys are licensed under a Creative Commons Attribution-ShareAlike 4.0 International License.}}
+%\setlength{\parsep}{0.3cm}
+
+\setlist[itemize]{itemsep=0pt,topsep=5pt,partopsep=0pt,parsep=0pt}
+\setlist[itemize]{label=$\octagon$,labelsep=4pt,labelindent=\parindent,leftmargin=*}
+\setlist[enumerate]{itemsep=5pt,topsep=5pt,partopsep=0pt,parsep=0pt}
+
+\usepackage{eso-pic}
+\newcommand\sidebarInst{
+\put(-5,0){
+\parbox[b][\paperheight]{\paperwidth}{%
+\includegraphics[width=0.8in,keepaspectratio]{latexImg/sideBarInstructorSurvey.png}%
+}}}
+
+\usepackage{eso-pic}
+\newcommand\sidebarStu{
+\put(-5,0){
+\parbox[b][\paperheight]{\paperwidth}{%
+\includegraphics[width=0.8in,keepaspectratio]{latexImg/sideBarStudentSurvey.png}%
+}}}
+
+\newcommand\LetterHeadTop{
+\put(75,685){
+\parbox[b][\paperheight]{\paperwidth}{%
+\includegraphics[width=0.95\textwidth,keepaspectratio]{latexImg/header.png}%
+}}}
+
+\footskip 20pt
+
+\raggedcolumns
+
+\begin{document}
+\textcolor{white}{}
+\vspace{0.5in}
+
+\AddToShipoutPicture*{\LetterHeadTop}
+\AddToShipoutPicture{\sidebarStu}
+
+%\hspace{0.1in}
+\fbox{\parbox{0.95\textwidth}{\timesfont Instructions\\[0.03in]
+This survey instrument was developed by the Language at the Community College Nexus project team at the Center for Integrated Language Communities (CILC). This survey instrument was originally used as part of the Students and Instructors of Languages at Community Colleges Surveys study in Fall 2015. The survey is designed to take approximately 15-20 minutes to complete. The development of this survey instrument was partially funded by a grant from the U.S. Department of Education. If you have any questions, you can contact CILC at 212-817-2086 or cilc@gc.cuny.edu. (Printed on \today)}}
+
+\vspace{0.2in}\hfill {\color{white} Ver 0.53}
+
+\vspace{0.1in}
+
+\begin{enumerate}
+\item What language are you currently studying in this class? \underline{\hspace{2.5in}}
+
+\item Which of the following are your reasons/goals for attending this college? Check all that apply.
+\vspace{-0.1in}\begin{multicols}{2}
+\begin{itemize}
+	\item to complete a certificate program
+	\item to obtain an associate degree
+	\item to transfer to a 4-year college or university
+	\item to obtain or update job-related skills
+	\item for self-improvement/personal enjoyment
+	\item to change careers
+	\item other \underline{\hspace{2in}}
+\end{itemize}
+\end{multicols}
+
+\item For this current academic term, how would you characterize your enrollment at this college?
+\vspace{-0.1in}\begin{multicols}{2}
+\begin{itemize}
+	\item full-time
+	\item part-time
+\end{itemize}
+\end{multicols}
+
+\item Why are you taking this language course? Check all that apply.
+\vspace{-0.1in}\begin{multicols}{2}
+\begin{itemize}
+	\item program requirement
+	\item fulfills elective
+	\item job/career prospects
+	\item enables transfer to 4-year college
+	\item intellectual curiosity
+	\item to communicate with family
+	\item to communicate with friends
+	\item other \underline{\hspace{2in}}
+\end{itemize}
+\end{multicols}
+
+\item What led you to choose the particular language (e.g. Spanish, ASL, Chinese, etc.) you are studying? Check all that apply.
+\vspace{-0.1in}\begin{multicols}{2}
+\begin{itemize}
+	\item it has the best potential for professional use
+	\item it fits my schedule best
+	\item it connects to my family background/heritage
+	\item I studied it before
+	\item it is relatively easy to learn
+	\item it fulfills an elective
+	\item I am interested in the culture
+	\item I speak it with family at home, or used to
+	\item other \underline{\hspace{2in}}
+\end{itemize}
+\end{multicols}
+
+\item On a scale of 1 to 10, with 1 being "not important at all" and 10 being "extremely important,” how important is it to know more than one language?\\
+
+\renewcommand{\arraystretch}{1.2}
+\begin{tabular}{|c|c|c|c|c|c|c|c|c|c|}
+\hline
+1 (not important at all) & 2&3&4&5&6&7&8&9&10 (extremely important)\\
+\hline
+$\octagon$&$\octagon$&$\octagon$&$\octagon$&$\octagon$&$\octagon$&$\octagon$&$\octagon$&$\octagon$&$\octagon$\\
+\hline
+\end{tabular}\\[0.05in]
+
+Why do you think this? \underline{\hspace{3in}}
+
+%%%%%%%%%%%%%%%%%%
+% new geometry (for top) from Page 2
+\end{enumerate}
+\newpage
+\newgeometry{top=0.8in, bottom=0.8in, left=1in, right=0.8in}
+\begin{enumerate}[resume]
+%%%%%%%%%%%%%%%%%%
+
+\item Before studying this language at this college, had you studied it in school before? Check all that apply.
+\vspace{-0.1in}\begin{multicols}{2}
+\begin{itemize}
+	\item no, never before in school
+	\item yes, in elementary school
+	\item yes, in middle school
+	\item yes, in high school
+	\item yes, in a weekend / after-school program
+	\item yes, in another college
+	\item other \underline{\hspace{2in}}
+\end{itemize}
+\end{multicols}
+
+
+\item \label{HomeLangQ}Do you speak a language other than English at home and/or with family?
+\vspace{-0.1in}\begin{multicols}{2}
+\begin{itemize}
+	\item no, only English (skip to Question \ref{HomeLangPostQ})
+	\item not anymore, but I used to
+	\item yes, a little
+	\item yes, a lot
+\end{itemize}
+\end{multicols}
+
+\item If you do (or did), which language(s)?  \underline{\hspace{2.5in}}
+
+
+\item How well do you communicate in this language? Check one box per row. If you listed more than one
+language for Question \ref{HomeLangQ}, answer for the language you feel most comfortable using (which is \underline{\hspace{1in}}).\\[-0.05in]
+
+\renewcommand{\arraystretch}{1.5}
+\begin{tabular}{|p{1.5in}|p{0.8in}|p{0.8in}|p{0.8in}|p{0.8in}|}
+\hline
+ & Not at all & Not so well & Well & Very well \\
+\hline
+Listening / Sign-reading & & & & \\
+\hline
+Speaking / Signing & & & & \\
+\hline
+Reading & & & & \\
+\hline
+Writing & & & & \\
+\hline
+\end{tabular}
+
+\item How many hours per week do you engage in the following activities in this language? Check one box per row.\\[-0.05in]
+
+\renewcommand{\arraystretch}{1.5}
+\begin{tabular}{|l|p{0.5in}|p{0.5in}|p{0.5in}|p{0.5in}|p{0.5in}|p{0.5in}|}
+\hline
+& $<$1 h&1-2 hrs&3-4 hrs&5-6 hrs&$>$7 hrs\\
+\hline
+Interacting with friends or family&&&&&\\
+\hline
+Reading newspapers, books, or magazines&&&&&\\
+\hline
+Listening to radio / watching TV&&&&&\\
+\hline
+Using social media&&&&&\\
+\hline
+Communicating at work&&&&&\\
+\hline
+Communicating at school&&&&&\\
+\hline
+Other \underline{\hspace{2in}}&&&&&\\
+\hline
+\end{tabular}
+
+
+
+\item \label{HomeLangPostQ}Have you attended a school where the courses were taught in a language other than English for half the time or more? Check all that apply.
+%\vspace{-0.1in}\begin{multicols}{2}
+\begin{itemize}
+	\item elementary school (\underline{language: \hspace{2in}})
+	\item middle school (\underline{language: \hspace{2in}})
+	\item high school (\underline{language: \hspace{2in}})
+	\item college / grad. school (\underline{language: \hspace{2in}})
+	\item I have attended only English-language schools
+\end{itemize}
+%\end{multicols}
+
+
+\item Do you plan to attend a four-year college or university? Check one.
+\vspace{-0.1in}\begin{multicols}{2}
+\begin{itemize}
+	\item yes
+	\item no
+\end{itemize}
+\end{multicols}
+
+\item At this college, in what range is your overall college grade average?
+\vspace{-0.1in}\begin{multicols}{2}
+\begin{itemize}
+	\item A
+	\item A- to B+
+	\item B
+	\item B- to C+
+	\item C
+	\item C- or lower
+	\item I do not have a GPA at this school 
+	\item I have taken pass/fail courses only
+\end{itemize}
+\end{multicols}
+
+\item About how many hours per week do you typically spend on the following activities? Check one box per row.	
+\renewcommand{\arraystretch}{1.5}
+\begin{tabular}{|l|p{0.37in}|p{0.37in}|p{0.37in}|p{0.37in}|p{0.37in}|p{0.37in}|p{0.39in}|}
+\hline
+&None&1-5 hours&6-10 hours&11-20 hours&21-30 hours&31-40 hours&41h or more\\
+\hline
+Studying/preparing for classes&&&&&&&\\
+\hline
+On campus&&&&&&&\\
+\hline
+Working for pay&&&&&&&\\
+\hline
+Participating in college-sponsored activities&&&&&&&\\
+\hline
+Providing care for people living with you&&&&&&&\\
+\hline
+Commuting to and from campus&&&&&&&\\
+\hline
+Other \underline{\hspace{2in}}&&&&&&&\\
+\hline
+\end{tabular}
+
+
+\item What are your plans for future language study? Check all that apply.
+%\vspace{-0.1in}\begin{multicols}{2}
+\begin{itemize}
+	\item I plan to take another language course at this college (Answer Question \ref{LangPlanYes} and skip Question \ref{LangPlanNo}) 
+	\item I will probably study language at another institution (Answer Question \ref{LangPlanYes} and skip Question \ref{LangPlanNo})
+	\item I will probably not study language anymore (Skip Question \ref{LangPlanYes} and answer Question \ref{LangPlanNo})
+	\item other \underline{\hspace{2in}}
+\end{itemize}
+%\end{multicols}
+
+\item \label{LangPlanYes}If you plan to take another semester of language study, please indicate why you plan to do so.  Check all that apply. 
+\vspace{-0.1in}\begin{multicols}{2}
+\begin{itemize}
+	\item program requirement
+	\item fulfills elective
+	\item job/career prospects
+	\item enables transfer to 4-year college
+	\item intellectual curiosity
+	\item to communicate with family
+	\item to communicate with friends
+	\item other \underline{\hspace{2in}}
+\end{itemize}
+\end{multicols}
+
+\item \label{LangPlanNo}If you do not plan to take another semester of language study, please indicate why you do not plan to do so. Check all that apply.
+\vspace{-0.1in}\begin{multicols}{2}
+\begin{itemize}
+	\item I do not need another elective course
+	\item I do not enjoy foreign language study
+	\item the cost of credits is too high
+	\item the cost of materials is too high
+	\item I do not think foreign language study will be of benefit to me
+	\item I am not receiving a good grade in this class
+	\item I want to take a different elective
+	\item other \underline{\hspace{2in}}
+\end{itemize}
+\end{multicols}
+
+\item Is English your native (first) language?
+\vspace{-0.1in}\begin{multicols}{2}
+\begin{itemize}
+	\item yes
+	\item no
+\end{itemize}
+\end{multicols}
+
+\item How well do you communicate in English? Check one box per row.\\
+
+\renewcommand{\arraystretch}{1.5}
+\begin{tabular}{|p{1in}|p{1in}|p{1in}|p{1in}|p{1in}|}
+\hline
+ & Not at all & Not so well & Well & Very well \\
+\hline
+Listening & & & & \\
+\hline
+Speaking & & & & \\
+\hline
+Reading & & & & \\
+\hline
+Writing & & & & \\
+\hline
+\end{tabular}
+
+
+\newgeometry{top=0.8in, bottom=0.8in, left=1in, right=0.8in}
+\item What is the highest academic credential a parent of yours has earned? Check one.
+\vspace{-0.1in}\begin{multicols}{2}
+\begin{itemize}
+	\item less than high school
+	\item high school or equivalent
+	\item vocational/technical certificate
+	\item Associate's degree
+	\item Bachelor’s degree
+	\item Master's or terminal degree
+	\item not sure
+	\item other \underline{\hspace{2in}} 
+\end{itemize}
+\end{multicols}
+
+
+\item What is your country of birth? \underline{\hspace{2.5in}}\\[0.05in]
+
+\item If born abroad, at what age did you first come to the U.S.? \underline{\hspace{2.5in}}\\[0.05in]
+
+\item In what country was your father born? \underline{\hspace{2.5in}}\\[0.05in]
+
+\item In what country was your mother born? \underline{\hspace{2.5in}}\\[0.05in]
+
+\item What is your race/ethnicity? Mark only one.
+\vspace{-0.1in}\begin{multicols}{2}
+\begin{itemize}
+	\item White, Non-Hispanic
+	\item Black or African American
+	\item Hispanic / Latino / Spanish
+	\item American Indian / Native American
+	\item Asian / Asian American / Pacific Islander
+	\item Other
+\end{itemize}
+\end{multicols}
+
+\item Is there a more specific term that you identify with? (Examples: American, Cuban, Jewish, Irish, Mexican-American, etc.?)\\
+
+\underline{\hspace{3in}}
+
+\item Are you an international student or foreign national?
+\vspace{-0.1in}\begin{multicols}{2}
+\begin{itemize}
+	\item yes
+	\item no
+\end{itemize}
+\end{multicols}
+
+\item What is your gender?
+\vspace{-0.1in}\begin{multicols}{2}
+\begin{itemize}
+	\item male
+	\item female
+\end{itemize}
+\end{multicols}
+
+\item What year were you born? \underline{\hspace{2.5in}}\\[0.05in]
+
+
+\item Please add any comments or feedback you'd like to share with us (optional).\\
+\fbox{\parbox{6in}{\textcolor{white}{.}\\[1.5in]}}
+
+\end{enumerate}
+
+
+\end{document}
